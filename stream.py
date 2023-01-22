@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+import numpy as np
 
 streamlit.header('🥣 Breakfast Menu')
 streamlit.text('Omega 3 & Blueberry Oatmeal')
@@ -18,7 +19,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
-fruit = 'kiwi'
+fruit = st.text_input("Name a Fruit, np.null)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/{}".format(fruit))
 
 table1 = pandas.json_normalize(fruityvice_response.json())
