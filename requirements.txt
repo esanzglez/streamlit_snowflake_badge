@@ -1,1 +1,1 @@
-snowflake-connecot-streamlit
+snowflake-connetor-python
